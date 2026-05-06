@@ -1,0 +1,70 @@
+1) Initialized the folder into a project folder (uv init .)
+2) Created a virtual environment (uv venv)
+3) Created template.py file, wrote the code for creating the multiple files in the project folder.
+4) In "src/cnnClassifier/constants/__init__.py" file location, I wrote the code there.
+5) Then in the "src/cnnClassifier/__init__.py" file, I wrote another code there also.
+6) Then, in the main.py file, I am importing the logger from cnnClassifier folder.
+
+Note:- (YAML = project ki settings aur parameters store karne wali clean config file.)
+
+utils folder ki common.py file actually kaafi saare alag alag functions ko store krti hai
+
+
+
+
+
+
+
+
+
+6 May, 2026
+Notes>>>>
+
+(DVC) -> This is a tool that is used for version control of large files, datasets & Machine Learning models,
+ and something that traditional version control systems struggle with. Dvc tracks datasets and manage data pipelines
+ and reproduce experiments. So instead of storing large files directly in git, DVC stores metadata,
+ .dvc files in git and stores actual data in remote storage like S3 or Google Drive or Local database.
+ While git is used for tracking the code changes collaboration, collaborations and version history of files.
+
+>> Difference between DVC v/s git.
+
+Feature                                   Git                                         DVC
+
+1) purpose                        Version control for code.                 Version control for data & ML-models.
+2) handles large files            Poor                                      Efficient
+3) stores data                    In repo                                   In external storage
+4) tracks changes                 Code changes                              Data + Model changes
+5) pipeline management            No                                        Yes
+6) reproducibility                Limited                                   Strong support
+7) works with ML                  Not designed                              Designed for ML
+
+
+# Important commands for dvc :-
+
+1) dvc init -> intializes dvc in your project, and it creates .dvc folder, adds config files, it must be run after git init.
+2) dvc add files -> It creates data.dvc, adds original files to git ignore, and stores files in dvc cache.
+3) git add data.dvc .gitignore
+   git commit -m "track dataset" -> Using this command git tracks metadata, not the actual data.
+4) dvc remote add -d -> It connects the storage from S3, Google drive and local file. And here; -d means default remote.
+5) dvc push -> It uploads the data to remote storage.
+6) dvc pull -> It downloads the data from remote.
+7) dvc checkout -> It restores data version based on git commit, and it sinks work space with .dvc files.
+8) dvc remove -> Stops tracking a file.
+
+
+Run pipeline stage :-
+9) dvc stage add -n preprocess / -d preprocess.py -d data.csv / -o clean.csv / python preprocess.py
+Here;
+-n -> stage name
+-d -> dependencies
+-o -> outputs
+
+10) dvc repro -> re-run pipeline when the data and code changes.
+11) dvc dag -> It is used to visualize the pipeline.
+
+
+Interview Questions :- 
+
+1) Why do we need dvc if we already have git?
+2) What files does dvc creates?
+3) What is dvc cache?
