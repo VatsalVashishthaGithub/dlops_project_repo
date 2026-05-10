@@ -22,3 +22,26 @@ config > config.yaml file ko banayi (for data sourcing, loading and zipping)
 params.yaml file updated
 
 research > data_ingestion.ipynb file 
+-------------------------------------------------
+
+constants/__init.py 
+
+create a new file 'config_entity.py' in entity folder and write class DataIngestionConfig
+
+
+Update the Configuration Manager in src config
+In config ---> configuration.py
+and write details from research ---> data_ingestion.ipynb file
+
+
+Update the components
+create a file in components folder ---> data_ingestion.py
+and write details from research ---> data-ingestion.ipynb file
+
+
+Update the Pipeline 
+In Pipeline folder ---> create new file 'stage_01_data_ingestion.py'
+
+
+Update the main.py 
+Now run the main.py and we will see in the artifacts folder data unzip and running all process.

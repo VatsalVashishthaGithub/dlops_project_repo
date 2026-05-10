@@ -68,3 +68,34 @@ Interview Questions :-
 1) Why do we need dvc if we already have git?
 2) What files does dvc creates?
 3) What is dvc cache?
+
+
+
+
+8 May, 2026
+Notes>>>
+
+1) What is Docker?
+Ans) Docker is a containerized platform, it helps developers packages like application code, libraries,
+     dependencies, configuration into a single unit called a container.
+
+2) Why Docker is used?
+Ans) Apllication may run on one system but fail on another. Docker solve this by creating a consistent environment.
+
+Main Components of Docker ->>
+a) Docker file -> Instructions to build image.
+b) Docker image -> It is blueprint or template.
+c) Docker container -> Running instance of image.
+d) Docker Hub -> Public image registry.
+
+3) What is Amazon EC2?
+Ans) EC2 stands for Elastic Compute Cloud, it is a virtual server in AWS, where we can install software,
+     host applications, run Machine Learning models, deploy Websites, run Docker containers.
+
+4) What is Amazon ECR?
+Ans) ECR stands for Elastic Container Registry. It is a AWS private Docker Image storage service. It stores 
+     Docker Images securely.
+
+5) Why ECR is used?
+Ans) When deploying apps to AWS, we first create Docker Image, then we will store images in ECR,
+     then EC2 or ECS or EKS pull images from ECR 

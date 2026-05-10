@@ -31,3 +31,27 @@ Expires: Wed, 06 May 2026 19:19:01 GMT
 Source-Age: 3
 
 ]
+[2026-05-10 18:04:22,927: INFO: main: >>>>>> Data Ingestion Stage started <<<<<<]
+[2026-05-10 18:04:22,951: INFO: common: YAML file config\config.yaml loaded successfully]
+[2026-05-10 18:04:22,972: INFO: common: YAML file params.yaml loaded successfully]
+[2026-05-10 18:04:22,975: INFO: common: created directory at: artifacts]
+[2026-05-10 18:04:22,977: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-10 18:04:22,979: ERROR: main: name 'Path' is not defined]
+Traceback (most recent call last):
+  File "C:\Users\Admin\OneDrive\Desktop\dlops_project\main.py", line 14, in <module>
+    data_ingestion.main()
+  File "C:\Users\Admin\OneDrive\Desktop\dlops_project\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 15, in main
+    data_ingestion.download_file()
+  File "C:\Users\Admin\OneDrive\Desktop\dlops_project\src\cnnClassifier\components\data_ingestion.py", line 23, in download_file
+    logger.info(f"File already exists of size: {get_size(Path(self.config.local_data_file))}")
+                                                       ^^^^
+NameError: name 'Path' is not defined
+[2026-05-10 18:07:09,635: INFO: main: >>>>>> Data Ingestion Stage started <<<<<<]
+[2026-05-10 18:07:09,643: INFO: common: YAML file config\config.yaml loaded successfully]
+[2026-05-10 18:07:09,649: INFO: common: YAML file params.yaml loaded successfully]
+[2026-05-10 18:07:09,651: INFO: common: created directory at: artifacts]
+[2026-05-10 18:07:09,652: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-10 18:07:09,652: INFO: data_ingestion: File already exists of size: ~ 11345 KB]
+[2026-05-10 18:07:10,693: INFO: main: >>>>>> Data Ingestion Stage completed <<<<<<
+
+x==========x]
