@@ -55,3 +55,9 @@ NameError: name 'Path' is not defined
 [2026-05-10 18:07:10,693: INFO: main: >>>>>> Data Ingestion Stage completed <<<<<<
 
 x==========x]
+[2026-05-12 18:08:23,644: INFO: common: YAML file config\config.yaml loaded successfully]
+[2026-05-12 18:08:23,712: INFO: common: YAML file params.yaml loaded successfully]
+[2026-05-12 18:08:23,728: INFO: common: created directory at: artifacts]
+[2026-05-12 18:22:03,717: INFO: common: YAML file config\config.yaml loaded successfully]
+[2026-05-12 18:22:03,748: INFO: common: YAML file params.yaml loaded successfully]
+[2026-05-12 18:22:03,761: INFO: common: created directory at: artifacts]
