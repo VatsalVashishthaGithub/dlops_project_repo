@@ -54,3 +54,21 @@ config.yaml file -->>> prepare_base_model added
 Research folder --->> prepare_base_model file --->>> create 
 
 -----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+entity folder  -->> config_entity.py  -->> Add -->> class prepareBaseModelConfig
+
+In src/config folder -->> configuration.py -->> add the import line -->> 
+from src.cnnClassifier.entity.config_entity import prepareBaseModelConfig
+
+In config folder -->> configuration.py -->> add this function -->> 
+def get_prepare_base_model_config(self)
+
+In components folder --->> create new file 'prepare_base_model.py' --->> and add 
+data from prepare_base_model.ipynb
+
+In src/pipeline folder  --->> create new file 'stage_02_prepare_base_model.py'
+
+For running this, we have to add this stage_02 in main.py
+from src.cnnClassifier.pipeline.stage_02_prepare_base_model import PrepareBaseModelTrainingPipeline
+
+-----------------------------------------------------------------------------
