@@ -85,3 +85,20 @@ Now, go to "components" folder  -->> create file 'prepare_callbacks.py'
 
 -----------------------------------------------------------------------------
 
+Model training ::
+
+Add training directory in config.yaml file
+
+Now create "training.ipynb" file into research folder.
+
+Now go to Entity folder ---> config_entity.py file ---> add TrainingConfig class.
+
+Now in config folder ---> configuration.py file ---> add get_training_config function.
+
+Now in components folder ---> create training.py
+
+Now in pipeline folder ---> create stage_03_training.py
+
+Now, run python main.py
+
+--------------------------------------------------------------------------  

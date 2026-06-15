@@ -15,15 +15,14 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
     try:
         with open(path_to_yaml, "r", encoding="utf-8") as yaml_file:
             content = yaml.safe_load(yaml_file)
-            print("✅ YAML Content:", content)  # Debug
             logger.info(f"YAML file {path_to_yaml} loaded successfully")
 
             if content is None:
-                raise ValueError("❌ YAML file is empty or badly formatted.")
+                raise ValueError("YAML file is empty or badly formatted.")
 
             return ConfigBox(content)
     except BoxValueError:
-        raise ValueError("❌ YAML file is empty or not a dictionary.")
+        raise ValueError("YAML file is empty or not a dictionary.")
     except Exception as e:
         raise e
 
