@@ -155,4 +155,63 @@ Now open the terminal and write python app.py
 Now click on upload and select image and click on predict ---> It will return result .
 
 --------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
 
+Agenda :::  How to deploy our dlops project on AWS 
+
+
+Now we will Deploy this project on AWS 
+
+Create DockerFile 
+
+Now for CI/CD  we have to create main.yaml in this directory . 
+
+.github/workflows/main.yaml 
+
+And add all scripting there . 
+
+step-1 
+
+Now open AWS  ---> IAM ---> Users ---> New User(Chiken) ---> Attach Policy --->
+
+AmazonEC2ContainerRegistryFullAccess,
+AmazonEC2FullAccess 
+
+Now click on 'Create Users' ---> create Access key with access key id here . 
+
+
+step-2 
+
+AWS Home Console ---> ECR ---> Get Started ----> Create Repository(Private , name=chicken) ----> click on create Repository ----> Copy this repo's URI and save it anywhere.
+
+
+step-3 
+
+AWS Home Console ---> EC2 ---> Server-Name(chicken-machine) ---> o.s.(ubuntu) ---> 
+--------------------------
+Optional- For Production Purpose 
+When we work with the deep learning so for this we have to select GPU Instance of AMI . so we can select 'Deep Learning AMI GPU PyTorch 1.13.1 (Ubuntu 20.04) 2030530' 
+------------------------------
+
+But we will select default for right now . 
+
+Instance type (t2.xlarge) ----> storage(29GB) ---> Launch Instance . 
+
+Now open it's cli and run these commands
+
+----------------------------------------
+sudo apt-get update -y
+
+sudo apt-get upgrade
+
+#required
+
+curl -fsSL https://get.docker.com -o get-docker.sh
+
+sudo sh get-docker.sh
+
+sudo usermod -aG docker ubuntu
+
+newgrp docker
+
+-----------------------------------------
